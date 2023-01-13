@@ -5,7 +5,7 @@ type Pet = {
     image: string,
     name: string,
     color: string,
-    sex: 'Masculino' | 'Feminino';
+    sex: 'Masculino' | 'Feminino'
 };
 
 const data: Pet[] = [
@@ -138,6 +138,7 @@ export const Pet = {
         return data.filter(item => item.type === type);
     },
     getFromName: (name: string): Pet[] => {
-        return data.filter(item => item.name.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) > -1)
+        return data.filter(item => 
+            item.name.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) > -1)
     }
 };
